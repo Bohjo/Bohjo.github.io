@@ -88,16 +88,16 @@ body {
     user-select: none;
     
 }
-.button:hover, #red:hover, #blue:hover{
+.button:hover, .red:hover, .blue:hover{
     background-color:rgb(255, 255, 255);
     color: rgb(40,40,40);
     transition: 0.1s linear;
 }
-#red {
+.red {
     color: rgb(255, 255, 255);
     background-color: #ff4949;
 }
-#blue {
+.blue {
     color: rgb(255, 255, 255);
     background-color: rgb(66, 186, 255);
 }
@@ -332,7 +332,7 @@ nav img {
 #location{
     border-right: 5px solid rgb(85, 85, 85);
 }
-main{
+section{
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -351,13 +351,13 @@ main{
     .navbar-mobile{
         visibility: visible;
     }
-    main{ /* Used for mobile navigation .. */
+    section{ /* Used for mobile navigation .. */
         overflow: hidden;
         transition: 0.35s ease-in-out;
         margin-left: 0;
         opacity: 0;
     }
-    main.active{
+    section.active{
         margin-left: 75vw;
         transition: 0.35s ease-in-out;
     }.session{

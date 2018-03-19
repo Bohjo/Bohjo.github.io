@@ -18,7 +18,7 @@ function transitionToPage(toPage){
 function toggleSidebar(){
 	$(".navbar-mobile aside").toggleClass("active");
 	$("#sidebar-button").toggleClass("active");
-	$("main").toggleClass("active");
+	$("section").toggleClass("active");
 }
 
 // Empty prompt.
