@@ -313,7 +313,7 @@ nav img {
     background-image: url("../img/background-3.jpg");
 
     display: grid;
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
