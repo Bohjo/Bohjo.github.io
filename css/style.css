@@ -88,7 +88,7 @@ body {
     user-select: none;
     
 }
-.button:hover{
+.button:hover, #red:hover, #blue:hover{
     background-color:rgb(255, 255, 255);
     color: rgb(40,40,40);
     transition: 0.1s linear;
@@ -101,16 +101,7 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(66, 186, 255);
 }
-#red:hover {
-    background-color:rgb(255, 255, 255);
-    color: rgb(40,40,40);
-    transition: 0.1s linear;
-}
-#blue:hover {
-    background-color:rgb(255, 255, 255);
-    color: rgb(40,40,40);
-    transition: 0.1s linear;
-}
+
 /* ################ Navigation ################ */
 
 nav{
