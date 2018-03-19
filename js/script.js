@@ -1,6 +1,6 @@
 
 
-var currentPage = "#findus-page";
+var currentPage = "#home-page";
 
 // Changes to another page smoothly.
 function transitionToPage(toPage){
