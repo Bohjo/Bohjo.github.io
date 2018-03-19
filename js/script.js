@@ -38,3 +38,7 @@ $(document).on("click", ".session div #red", function() {
 	if(confirm("Are you sure you want to cancel this training session?"))
 		$(this).parent().parent().remove(); 
 });
+
+$(document).ready(function() {
+    console.log( "En funktion som sker vid sidladdning." );
+});

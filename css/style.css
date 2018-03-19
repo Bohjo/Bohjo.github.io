@@ -26,31 +26,32 @@ h1{
     font-size: 5em;
     text-align: center;
 }   
-h2{
-        
+h2{      
     font-family: 'Montserrat-Regular';
     color: rgb(255, 255, 255);
     font-size: 2em;
     text-align: center;
     letter-spacing: 5px;
 }   
-p{
-        
+p{      
     font-family: 'Montserrat-Regular';
     color: rgb(209, 209, 209);
     font-size: 1em;
-    text-align: center;
-        
+    text-align: left;    
 }    
 a{
-    
     font-family: 'Montserrat-Regular';
-    color: rgb(10, 79, 168);
+    color: rgb(66, 186, 255);
     text-decoration:none;
     font-size: 1em;
-    text-align: center;
 }
 
+.blue-text{
+    color: rgb(66, 186, 255);
+}
+.red-text{
+    color: #ff4949;
+}
 /* ################ General page settings ################ */
 
 ::-webkit-scrollbar { /* Makes the scrollbar invisible .. */ 
@@ -216,14 +217,17 @@ nav img {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
-    filter: grayscale(100%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .poster p{
     padding: 1em 30%;
+    color:rgb(255, 255, 255);
 }
 .poster *{
-    color:rgb(255, 255, 255);
-    text-shadow: 0px 0px 10px #000000
+    text-shadow: 0px 0px 12px #000000;
 }
 .poster-1{
     grid-area: po1;
