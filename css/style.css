@@ -1,0 +1,383 @@
+
+/* ################ Fonts & Text ################ */
+
+@font-face{
+    
+    font-family: 'Montserrat-Bold';
+    src: url("../fonts/Montserrat-Bold.ttf") format('truetype')
+
+}
+@font-face{
+    
+    font-family: 'Montserrat-Regular';
+    src: url("../fonts/Montserrat-Regular.ttf") format('truetype')
+
+}
+@font-face{
+    
+    font-family: 'Hind-Regular';
+    src: url("../fonts/Hind-Regular.ttf") format('truetype')
+
+}
+
+h1{
+    font-family: 'Montserrat-Bold';
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    text-align: center;
+}   
+h2{
+        
+    font-family: 'Montserrat-Regular';
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 5px;
+}   
+p{
+        
+    font-family: 'Montserrat-Regular';
+    color: rgb(209, 209, 209);
+    font-size: 1em;
+    text-align: center;
+        
+}    
+a{
+    
+    font-family: 'Montserrat-Regular';
+    color: rgb(10, 79, 168);
+    text-decoration:none;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* ################ General page settings ################ */
+
+::-webkit-scrollbar { /* Makes the scrollbar invisible .. */ 
+    background: transparent;
+    width: 0px;
+}
+input:focus {
+    outline: none;
+}
+*{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 100%;
+}
+body {
+    font-size: 25px;
+    background-color: rgb(40, 40, 40);
+}
+.anchor-center{
+    margin:auto;
+}
+.strip-dark{
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1.5% 0;
+}
+.button{
+    font-family: 'Montserrat-Regular';
+    background-color:rgb(40, 40, 40);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    transition: 0.1s linear;
+    user-select: none;
+    
+}
+.button:hover{
+    background-color:rgb(255, 255, 255);
+    color: rgb(40,40,40);
+    transition: 0.1s linear;
+}
+#red {
+    color: rgb(255, 255, 255);
+    background-color: #ff4949;
+}
+#blue {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 186, 255);
+}
+#red:hover {
+    background-color:rgb(255, 255, 255);
+    color: rgb(40,40,40);
+    transition: 0.1s linear;
+}
+#blue:hover {
+    background-color:rgb(255, 255, 255);
+    color: rgb(40,40,40);
+    transition: 0.1s linear;
+}
+/* ################ Navigation ################ */
+
+nav{
+    position: fixed;
+    width: 100vw;
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+nav img {
+    height: 90%;
+}
+
+/* - Desktop */
+
+.navbar-desktop{
+    overflow: hidden;
+    right: 0;
+    transition: 0.5s ease-in-out;
+    opacity: 0.65; 
+}
+.navbar-desktop:hover{
+    transition: 0.5s ease-in-out;
+    opacity: 1; 
+}
+
+.navbar-desktop ul {
+    margin-left: auto;
+    margin-right: -200px;
+    padding: 30px 0px;
+    transition: 0.5s;
+}
+.navbar-desktop ul:hover {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+.navbar-desktop ul li{
+    float: left;
+    margin-right: 35px;
+    padding: 1% 40px;
+    font-size: 80%;
+}
+
+/* - Mobile */
+
+.navbar-mobile{
+    visibility: hidden;
+    position:fixed;
+}
+.navbar-mobile #sidebar-button {
+    height: 60%;
+    margin-left: 15px;
+    transform:rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: 0.3s ease-in;
+}
+.navbar-mobile #sidebar-button.active{
+    transition: 0.3s ease-out;
+    transform:rotate(90deg);
+}
+.navbar-mobile aside{
+    background-color:rgb(40, 40, 40);
+    overflow: hidden;
+    margin-top:auto;
+    height: 100vh;
+    width: 75vw;
+    margin-left: -75vw;
+    transition: 0.35s ease-in-out;
+}
+.navbar-mobile aside.active{
+    margin-left: 0;
+    transition: 0.35s ease-in-out;
+}
+.navbar-mobile aside img{
+    height: 150px;
+}
+.navbar-mobile aside ul li{
+    text-align: left;
+    border-top: 1px solid rgb(85, 85, 85);
+    padding: 25px;
+    font-size: 20px;
+}
+
+/* ################ Page: 1 (Home Page) ################ */
+
+#home-page{
+    background-image: url("../img/background-1.jpg");
+  
+    display: grid;
+    width: 100%;
+    height: 200vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". tit ."
+    ". ard ."
+    ". po1 ."
+    ". po2 ."
+    ". po3 ."
+}
+
+.title{
+    grid-area: tit;
+}
+.arrowdown{
+    height: 20%;
+    grid-area: ard;
+}
+.poster{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+.poster p{
+    padding: 1em 30%;
+}
+.poster *{
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px #000000
+}
+.poster-1{
+    grid-area: po1;
+    background-image: url("../img/poster-1.jpg");
+}
+.poster-2{
+    grid-area: po2;
+    background-image: url("../img/poster-2.jpg");
+}
+.poster-3{
+    grid-area: po3;
+    background-image: url("../img/poster-3.jpg");
+}
+
+/* ################ Page: 2 (Schedule Page) ################ */
+
+#schedule-page{
+    background-image: url("../img/background-2.jpg");
+
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . . ."
+    ". . tit . ."
+    ". wek wek wek ."
+    ". . sew . ."
+    ". . sew . ."
+    ". . sew . ."
+    ". . sew . ."
+    ". . sew . ."
+    ". . sew . ."
+}
+
+.week{
+    grid-area:wek;
+    display:flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+.week li{
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 7.5px;
+}
+.session-wrapper{
+    grid-area:sew;
+    overflow: scroll;
+}
+.session{
+    width: 35vw;
+    background-color: rgba(40, 40, 40, 0.65);
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.session div{
+    font-family: 'Montserrat-Bold';
+    text-align: left;
+    padding: 3% 5%;
+}
+.session div div{
+    font-size: 0.85em;
+    margin: 5%;
+    padding: 10px;
+    float:right;
+}
+
+/* ################ Page: 3 (Find Us Page) ################ */
+
+#findus-page{
+    background-image: url("../img/background-3.jpg");
+
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". tit ."
+    ". con ."
+    ". . ."
+    ". . ."
+}
+    
+.contact{
+    grid-area: con;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contact div *{
+    margin: 5px 30px;
+}
+.contact div{
+    margin: 0px 0;
+}
+#location{
+    border-right: 5px solid rgb(85, 85, 85);
+}
+main{
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+}
+
+/* ################ Mobile Support ################ */
+
+@media all and (max-width: 941px){
+    body {
+        font-size: 13.5px; 
+    }
+    .navbar-desktop{
+        visibility: hidden;
+    }
+    .navbar-mobile{
+        visibility: visible;
+    }
+    main{ /* Used for mobile navigation .. */
+        overflow: hidden;
+        transition: 0.35s ease-in-out;
+        margin-left: 0;
+        opacity: 0;
+    }
+    main.active{
+        margin-left: 75vw;
+        transition: 0.35s ease-in-out;
+    }.session{
+        width: 100vw;
+    }
+    .poster p{
+        padding: 1em 5%;
+    }.contact{
+        flex-direction: column;
+    }#location{
+        border-bottom: 3px solid rgb(85, 85, 85);
+        border-right: none;
+    }
+}
